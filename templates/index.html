@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quizautomat</title>
+</head>
+<body>
+<center>
+    <h1>Hello stranger! This is Quizautomat </h1>
+    <h2>Enter your name and answer the questions.</h2>
+    <form method="POST">
+        <div style="text-align: center;">
+            <div style="display: inline-block; text-align: left;">
+                <label for="username">Your name:</label>
+                <!--<input type="text" id="username" name="username" value="stranger"><br><br>-->
+                <input type="text" id="username" name="username"><br><br>
+                <label for="questionamount">Your desired number of questions:</label><br><br>
+            </div>
+        </div>
+        <select id="questionamount" name="questionamount">
+            <option value="5" selected>5</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+            <option value="20">20</option>
+        </select>
+        <br><br>
+        <input type="submit" value="Submit and play the game">
+    </form>
+</center>
+</body>
+</html>

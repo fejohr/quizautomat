@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quizautomat</title>
+</head>
+<body>
+<center>
+    {% if username %}
+    <h1>Hello {{ username }}! You answered {{ correctquestions }} of {{ question_counter }}  questions correct! </h1>
+    <h2>Your score is {{ userscore }}&percnt;!</h2>
+
+    <h3><a href="./">Play again? Go to startpage</a></h3>
+    {% else %}
+    <h1>Hello stranger! Let's play a game :-D</h1>
+    <h2><a href="./">Startpage</a></h2>
+    {% endif %}
+
+    <div style="text-align: center;">
+        <div style="display: inline-block; text-align: left;">
+
+            <table style="width:80%">
+              <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Age</th>
+              </tr>
+              <tr>
+                <td>Jill</td>
+                <td>Smith</td>
+                <td>50</td>
+              </tr>
+              <tr>
+                <td>Eve</td>
+                <td>Jackson</td>
+                <td>94</td>
+              </tr>
+            </table>
+        </div>
+    </div>
+</center>
+</body>
+</html>

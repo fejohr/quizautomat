@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quizautomat</title>
+</head>
+<body>
+<center>
+    {% if username %}
+    <h1>{{ username }}, these are your questions!</h1>
+    {% else %}
+    <h1>Hello stranger! Let's play a game :-D</h1>
+    <h2><a href="./">Startpage</a></h2>
+    {% endif %}
+
+    {% if question %}
+    <h2>{{ question | safe }}</h2>
+    {% else %}
+    <h2>hm... no question :-(</h2>
+    {% endif %}
+
+    <form>
+        <div style="text-align: center;">
+            <div style="display: inline-block; text-align: left;">
+                {% if answer0 %}
+                <input type="radio" id="answera" name="answer" value="0">
+                <label for="answera"> {{ answer0 | safe }}</label><br>
+                {% endif %}
+                {% if answer1 %}
+                <input type="radio" id="answerb" name="answer" value="1">
+                <label for="answerb"> {{ answer1 | safe }}</label><br>
+                {% endif %}
+                {% if answer2 %}
+                <input type="radio" id="answerc" name="answer" value="2">
+                <label for="answerc"> {{ answer2 | safe }}</label><br>
+                {% endif %}
+                {% if answer3 %}
+                <input type="radio" id="answerd" name="answer" value="3">
+                <label for="answerd"> {{ answer3 | safe }}</label><br>
+                {% endif %}
+                <br>
+                <input type="hidden" id="userid" name="id" value={{ userid }}>
+                <input type="submit" value="Submit and go to next question">
+            </div>
+        </div>
+    </form>
+</center>
+</body>
+</html>
